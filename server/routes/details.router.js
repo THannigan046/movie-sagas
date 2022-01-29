@@ -6,7 +6,7 @@ const pool = require('../modules/pool')
 router.get('/:id', (req, res) => {
     const movieId = req.params.id
     console.log('made it to server', req.params.id);
-    
+
     const query = `
   SELECT  
   movies.title, 
@@ -29,7 +29,7 @@ WHERE movies.id=$1
             res.send(result.rows);
         })
         .catch(err => {
-            console.log('ERROR: Get all movies', err);
+            console.log('ERROR: Get all details', err);
             res.sendStatus(500)
         })
 });

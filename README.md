@@ -15,7 +15,7 @@ Additional README details can be found [here](https://github.com/PrimeAcademy/re
 [] genre router.get
 [] details page (react component )
     [] Should display title, description, image and all genres. (req.params :id)
-    [] back to list button that navigates back to home view. 
+    [x] back to list button that navigates back to home view. 
 
 [] style w material ui 
     [] cards for posters on the list page

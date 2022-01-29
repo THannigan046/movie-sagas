@@ -1,20 +1,33 @@
 import react  from 'react'
 import { useEffect, useState } from 'react'
 import { useParams, useHistory } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
 
 
 function DetailView() {
-    const history = useHistory();
+    const dispatch = useDispatch();
     
+    const details = useSelector(store => store.details)
+    
+
+    console.log('details in page is', details);
+    const history = useHistory();
     const toHomePage = () => {
         history.push('/')
     }
-    
-    const {id} = useParams();
     return (
         <>
-        <h2>this is a detail view</h2>
-        <p>details for movie with an id of {id} </p>
+        <section>
+            {details.map(detail => {
+               return (
+                   <div key={detail.id}>
+                    <img src={detail.poster}/>
+                    <p>{detail.description}</p>
+                    <h4>genres: {detail.genres}</h4>
+                   </div>
+               ) 
+            })}
+        </section>
         <button onClick={toHomePage}>Home</button>
         </>
     )

@@ -6,14 +6,14 @@ import './MovieList.css'
 function MovieList() {
     const history = useHistory();
     const dispatch = useDispatch();
-    const movies = useSelector(store => store.movies);
+    const movies = useSelector(storeInstance => storeInstance.movies);
 
     useEffect(() => {
         dispatch({ type: 'FETCH_MOVIES' });
     }, []);
 
     const displayDetail = (movieId) => {
-        console.log('in displayDetail');
+        //console.log('in displayDetail');
         dispatch({type: 'FETCH_DETAILS', payload: movieId})
         history.push('/details')
     }
