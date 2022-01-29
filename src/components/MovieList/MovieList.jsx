@@ -12,9 +12,9 @@ function MovieList() {
         dispatch({ type: 'FETCH_MOVIES' });
     }, []);
 
-    const displayDetail = (event) => {
+    const displayDetail = (movieId) => {
         console.log('in displayDetail');
-        
+        dispatch({type: 'FETCH_DETAILS', payload: movieId})
         history.push('/details')
     }
 
@@ -24,9 +24,9 @@ function MovieList() {
             <section className="movies">
                 {movies.map(movie => {
                     return (
-                        <div key={movie.id} >
+                        <div key={movie.movie_id} >
                             <h3>{movie.title}</h3>
-                            <img src={movie.poster} alt={movie.title} onClick={(event) => displayDetail(event.target.id)}/>
+                            <img src={movie.poster} alt={movie.title} onClick={() => displayDetail(movie)}/>
                         </div>
                     );
                 })}

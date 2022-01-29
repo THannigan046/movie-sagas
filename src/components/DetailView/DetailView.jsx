@@ -2,8 +2,10 @@ import react  from 'react'
 import { useEffect, useState } from 'react'
 import { useParams, useHistory } from 'react-router-dom';
 
+
 function DetailView() {
     const history = useHistory();
+    
     const toHomePage = () => {
         history.push('/')
     }

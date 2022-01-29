@@ -12,6 +12,7 @@ Additional README details can be found [here](https://github.com/PrimeAcademy/re
 
 [] onClick for movie poster that displays the /details view for that movie
 
+[] genre router.get
 [] details page (react component )
     [] Should display title, description, image and all genres. (req.params :id)
     [] back to list button that navigates back to home view. 
