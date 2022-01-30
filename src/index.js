@@ -19,13 +19,13 @@ function* rootSaga() {
 
 function* fetchDetails(action) {
     console.log('made it to fetchDetails', action.payload.movie_id);
-    const details = yield axios.get(`/api/details/${action.payload.movie_id}` )
+    const details = yield axios.get(`/api/details/${action.payload.movie_id}`)
     console.log('details is', details.data);
     yield put({
-        type: 'SET_DETAILS', 
+        type: 'SET_DETAILS',
         payload: details.data
     })
-    
+
 }
 function* fetchAllMovies() {
     // get all movies from the DB
@@ -37,7 +37,7 @@ function* fetchAllMovies() {
     } catch {
         console.log('get all error');
     }
-        
+
 }
 
 // Create sagaMiddleware
@@ -67,7 +67,7 @@ const details = (state = [], action) => {
     switch (action.type) {
         case 'SET_DETAILS':
             return action.payload;
-        default: 
+        default:
             return state;
     }
 }
@@ -88,7 +88,7 @@ sagaMiddleware.run(rootSaga);
 ReactDOM.render(
     <React.StrictMode>
         <Provider store={storeInstance}>
-        <App />
+            <App />
         </Provider>
     </React.StrictMode>,
     document.getElementById('root')

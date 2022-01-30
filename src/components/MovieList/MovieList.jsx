@@ -28,7 +28,7 @@ function MovieList() {
                     {movies.map(movie => {
                         return (
                             <Grid item >
-                                <Card variant="outlined" key={movie.movie_id} sx={{ padding: '36px', backgroundColor: 'lightGray', border: '6px solid black' } } >
+                                <Card variant="outlined" key={movie.movie_id} sx={{ padding: '36px', backgroundColor: 'lightGray', border: '6px solid black' }} >
                                     <Typography variant='h5'>{movie.title}</Typography>
                                     <img src={movie.poster} alt={movie.title} onClick={() => displayDetail(movie)} />
                                 </Card>
