@@ -8,7 +8,7 @@ function DetailView() {
     const dispatch = useDispatch();
     
     const details = useSelector(store => store.details)
-    
+    const genres = details.genres
 
     console.log('details in page is', details);
     const history = useHistory();
@@ -21,12 +21,14 @@ function DetailView() {
             {details.map(detail => {
                return (
                    <div key={detail.id}>
+                       <h1>{detail.title}</h1>
                     <img src={detail.poster}/>
                     <p>{detail.description}</p>
-                    <h4>genres: {detail.genres}</h4>
+                    <h3>Genre: {detail.genres}</h3>
                    </div>
                ) 
             })}
+            
         </section>
         <button onClick={toHomePage}>Home</button>
         </>
