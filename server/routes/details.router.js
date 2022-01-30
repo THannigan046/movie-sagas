@@ -7,7 +7,7 @@ router.get('/:id', (req, res) => {
     const movieId = req.params.id
     console.log('made it to server', req.params.id);
 
-    const query = `
+  const query = `
   SELECT  
   movies.title, 
   movies.poster,
@@ -19,9 +19,7 @@ router.get('/:id', (req, res) => {
   JOIN genres 
     ON genres.id = movies_genres.genre_id
 WHERE movies.id=$1
-  GROUP BY movies.id, title, poster, description
-  
-  ;
+  GROUP BY movies.id, title, poster, description;
   `;
     pool.query(query, [movieId])
         .then(result => {
