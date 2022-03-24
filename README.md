@@ -1,31 +1,39 @@
-# Project Name
+# Movie Sagas 
 
-[Project Instructions](./INSTRUCTIONS.md), this line may be removed once you have updated the README.md
 
-## Description
+_Duration: weekend sprint
 
-Your project description goes here. What problem did you solve? How did you solve it?
+For one of our weekend challenges at prime digital academy, we were asked to create a movie database full stack app that utilizes, react, redux, redux sagas, and storage with an sql database. One of the biggest challenges of this project was getting my sagas right and familiarizing myself with the pattern of writing sagas 
 
-Additional README details can be found [here](https://github.com/PrimeAcademy/readme-template/blob/master/README.md).
 
-## Todo list 
+### Prerequisites
 
-[x] onClick for movie poster that displays the /details view for that movie
+Create a database called ‘movies’ (or whatever you want to call it) 
+Run the database.sql file
+Npm install 
+Npm run server
+Npm run client
 
-[x] genre router.get
-[x] details page (react component )
-    [x] Should display title, description, image and all genres. (req.params :id)
-    [x] back to list button that navigates back to home view. 
 
-[] style w material ui 
-    [] cards for posters on the list page
-    [] grids for posters on the list page
+## Usage
 
-commit a bunch (set a timer or something)
 
-maybe use branches. 
+1. Click on a movie to view details! There's quite a few in there. 
 
-[] comment code. 
 
-## Project description goes here
+
+## Built With
+
+- [Node.js](https://nodejs.org/en/)
+- [ReactJs] (https://reactjs.org/)
+- [Redux] (https://redux.js.org/)
+- [PostgreSQL]  (https://www.postgresql.org/)
+
+
+
+## Acknowledgement
+Thanks to [Prime Digital Academy](www.primeacademy.io) who equipped and helped me to make this application a reality. I’d also like to thank my teacher, Edan Schwartz.
+
+## Support
+If you have suggestions or issues, please email me at thannigan046@gmail.com
 

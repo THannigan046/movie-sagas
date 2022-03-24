@@ -20,7 +20,7 @@ function* rootSaga() {
 function* fetchDetails(action) {
     console.log('made it to fetchDetails', action.payload.movie_id);
     const details = yield axios.get(`/api/details/${action.payload.movie_id}`)
-    console.log('details is', details.data);
+    console.log('details is', details.data); 
     yield put({
         type: 'SET_DETAILS',
         payload: details.data
